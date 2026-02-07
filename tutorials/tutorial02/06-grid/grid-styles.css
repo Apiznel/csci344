@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: pink;
+}
+
+.grid-container {
+  height: 100vh;
+  /* you will add additional rules for the container here  */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+/* create your child rules here:  */
+div {
+  border: 1px solid black;
+  grid-column: span 3;
+  background-color: white;
+}
+
+.item-2,
+.item-4 {
+  grid-column: 3 / span 3;
+}
