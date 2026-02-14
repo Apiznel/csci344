@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Photo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <!-- Non-functional mockup -->
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <h1>Photo App</h1>
+
+      <ul>
+        <li><p>gibsonjack</p></li>
+        <li><a href="#signout">Sign out</a></li>
+      </ul>
+    </nav>
+
+    <!-- Recommendations Panel -->
+    <aside>
+      <div id="profile">
+        <img
+          src="https://picsum.photos/320?random=1"
+          alt="Randomized Profile Picture"
+        />
+        <h2>gibsonjack</h2>
+      </div>
+      <div id="suggestions">
+        <h3>Suggestions for you</h3>
+        <img
+          src="https://picsum.photos/320?random=2"
+          alt="Randomized Profile Picture"
+        />
+        <ul>
+          <li>
+            <strong>amandahudson</strong>
+            <p>suggested for you</p>
+          </li>
+        </ul>
+        <a href="#follow">follow</a>
+        <img
+          src="https://picsum.photos/320?random=3"
+          alt="Randomized Profile Picture"
+        />
+        <ul>
+          <li>
+            <strong>qthornton</strong>
+            <p>suggested for you</p>
+          </li>
+        </ul>
+        <a href="#follow">follow</a>
+        <img
+          src="https://picsum.photos/320?random=4"
+          alt="Randomized Profile Picture"
+        />
+        <ul>
+          <li>
+            <strong>ynelson</strong>
+            <p>suggested for you</p>
+          </li>
+        </ul>
+        <a href="#follow">follow</a>
+        <img
+          src="https://picsum.photos/320?random=5"
+          alt="Randomized Profile Picture"
+        />
+        <ul>
+          <li>
+            <strong>lauralyons</strong>
+            <p>suggested for you</p>
+          </li>
+        </ul>
+        <a href="#follow">follow</a>
+        <img
+          src="https://picsum.photos/320?random=6"
+          alt="Randomized Profile Picture"
+        />
+        <ul>
+          <li>
+            <strong>robertsonkristen</strong>
+            <p>suggested for you</p>
+          </li>
+        </ul>
+        <a href="#follow">follow</a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- Stories Panel -->
+      <section id="stories">
+        <div>
+          <ul>
+            <li>
+              <img
+                src="https://picsum.photos/320?random7"
+                alt="Randomized Profile Picture"
+              />
+              <p>gouldjennifer</p>
+            </li>
+            <li>
+              <img
+                src="https://picsum.photos/320?random8"
+                alt="Randomized Profile Picture"
+              />
+              <p>matthew16</p>
+            </li>
+            <li>
+              <img
+                src="https://picsum.photos/320?random9"
+                alt="Randomized Profile Picture"
+              />
+              <p>sanchezjill</p>
+            </li>
+            <li>
+              <img
+                src="https://picsum.photos/320?random10"
+                alt="Randomized Profile Picture"
+              />
+              <p>gloria62</p>
+            </li>
+            <li>
+              <img
+                src="https://picsum.photos/320?random11"
+                alt="Randomized Profile Picture"
+              />
+              <p>jwright</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Cards/Posts -->
+      <section id="posts">
+        <article>
+          <section>
+            <div>
+              <h1>gibsonjack</h1>
+              <a href="#more" aria-label="more"
+                ><i class="fa-solid fa-ellipsis"></i
+              ></a>
+            </div>
+            <img
+              src="https://picsum.photos/868/568?random1"
+              alt="Randomized Post Picture"
+            />
+            <div>
+              <ul>
+                <!-- Making icons clickable for prototype -->
+                <!-- It would also make sense for names and pictures to be clickable if this was real -->
+                <a href="#like" aria_label="like"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#comment" aria_label="comment"
+                  ><i class="fa-regular fa-comment"></i
+                ></a>
+                <a href="#share" aria_label="share"
+                  ><i class="fa-regular fa-paper-plane"></i
+                ></a>
+              </ul>
+              <a href="#bookmark" aria_label="bookmark"
+                ><i class="fa-regular fa-bookmark"></i
+              ></a>
+            </div>
+            <div>
+              <strong>30 likes</strong>
+            </div>
+            <div>
+              <p>
+                <strong>gibsonjack</strong> Here is a caption about the photo.
+                Text text text text text text text text text text text text text
+                text text text text text text text... <a href="#more">more</a>
+              </p>
+            </div>
+            <!-- Should have a "View all # comments" button when comments exceeds certain amount -->
+            <div class="comments">
+              <p>
+                <strong>lizzie</strong> Here is a comment text text text text
+                text text text.
+              </p>
+              <p>
+                <strong>vanek97</strong> Here is another comment text text text.
+              </p>
+              <span>1 DAY AGO</span>
+            </div>
+            <div class="comment-box">
+              <div>
+                <a href="#emoji" aria_label="emoji"
+                  ><i class="fa-regular fa-smile"></i
+                ></a>
+                <!-- Placeholder for input -->
+                <p>Add a comment...</p>
+              </div>
+              <a href="#post">Post</a>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <section>
+            <div>
+              <h1>gibsonjack</h1>
+              <a href="#more" aria_label="more"
+                ><i class="fa-solid fa-ellipsis"></i
+              ></a>
+            </div>
+            <img
+              src="https://picsum.photos/868/568?random2"
+              alt="Randomized Post Picture"
+            />
+            <div>
+              <ul>
+                <a href="#like" aria_label="like"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#comment" aria_label="comment"
+                  ><i class="fa-regular fa-comment"></i
+                ></a>
+                <a href="#share" aria_label="share"
+                  ><i class="fa-regular fa-paper-plane"></i
+                ></a>
+              </ul>
+              <a href="#bookmark" aria_label="bookmark"
+                ><i class="fa-regular fa-bookmark"></i
+              ></a>
+            </div>
+            <div>
+              <strong>30 likes</strong>
+            </div>
+            <div>
+              <p>
+                <strong>gibsonjack</strong> Here is a caption about the photo.
+                Text text text text text text text text text text text text text
+                text text text text text text text... <a href="#more">more</a>
+              </p>
+            </div>
+            <div class="comments">
+              <p>
+                <strong>lizzie</strong> Here is a comment text text text text
+                text text text.
+              </p>
+              <p>
+                <strong>vanek97</strong> Here is another comment text text text.
+              </p>
+              <span>1 DAY AGO</span>
+            </div>
+            <div class="comment-box">
+              <div>
+                <a href="#emoji" aria_label="emoji"
+                  ><i class="fa-regular fa-smile"></i
+                ></a>
+                <p>Add a comment...</p>
+              </div>
+              <a href="#post">Post</a>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <section>
+            <div>
+              <h1>gibsonjack</h1>
+              <a href="#more" aria_label="more"
+                ><i class="fa-solid fa-ellipsis"></i
+              ></a>
+            </div>
+            <img
+              src="https://picsum.photos/868/568?random3"
+              alt="Randomized Post Picture"
+            />
+            <div>
+              <ul>
+                <a href="#like" aria_label="like"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#comment" aria_label="comment"
+                  ><i class="fa-regular fa-comment"></i
+                ></a>
+                <a href="#share" aria_label="share"
+                  ><i class="fa-regular fa-paper-plane"></i
+                ></a>
+              </ul>
+              <a href="#bookmark" aria_label="bookmark"
+                ><i class="fa-regular fa-bookmark"></i
+              ></a>
+            </div>
+            <div>
+              <strong>30 likes</strong>
+            </div>
+            <div>
+              <p>
+                <strong>gibsonjack</strong> Here is a caption about the photo.
+                Text text text text text text text text text text text text text
+                text text text text text text text... <a href="#more">more</a>
+              </p>
+            </div>
+            <div class="comments">
+              <p>
+                <strong>lizzie</strong> Here is a comment text text text text
+                text text text.
+              </p>
+              <p>
+                <strong>vanek97</strong> Here is another comment text text text.
+              </p>
+              <span>1 DAY AGO</span>
+            </div>
+            <div class="comment-box">
+              <div>
+                <a href="#emoji" aria_label="emoji"
+                  ><i class="fa-regular fa-smile"></i
+                ></a>
+                <p>Add a comment...</p>
+              </div>
+              <a href="#post">Post</a>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <section>
+            <div>
+              <h1>gibsonjack</h1>
+              <a href="#more" aria_label="more"
+                ><i class="fa-solid fa-ellipsis"></i
+              ></a>
+            </div>
+            <img
+              src="https://picsum.photos/868/568?random4"
+              alt="Randomized Post Picture"
+            />
+            <div>
+              <ul>
+                <a href="#like" aria_label="like"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#comment" aria_label="comment"
+                  ><i class="fa-regular fa-comment"></i
+                ></a>
+                <a href="#share" aria_label="share"
+                  ><i class="fa-regular fa-paper-plane"></i
+                ></a>
+              </ul>
+              <a href="#bookmark" aria_label="bookmark"
+                ><i class="fa-regular fa-bookmark"></i
+              ></a>
+            </div>
+            <div>
+              <strong>30 likes</strong>
+            </div>
+            <div>
+              <p>
+                <strong>gibsonjack</strong> Here is a caption about the photo.
+                Text text text text text text text text text text text text text
+                text text text text text text text... <a href="#more">more</a>
+              </p>
+            </div>
+            <div class="comments">
+              <p>
+                <strong>lizzie</strong> Here is a comment text text text text
+                text text text.
+              </p>
+              <p>
+                <strong>vanek97</strong> Here is another comment text text text.
+              </p>
+              <span>1 DAY AGO</span>
+            </div>
+            <div class="comment-box">
+              <div>
+                <a href="#emoji" aria_label="emoji"
+                  ><i class="fa-regular fa-smile"></i
+                ></a>
+                <p>Add a comment...</p>
+              </div>
+              <a href="#post">Post</a>
+            </div>
+          </section>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

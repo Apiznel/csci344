@@ -1,0 +1,237 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 35vh 1fr;
+}
+
+/* Link color copied from image */
+a {
+  color: #3c74a2;
+}
+
+i {
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Comfortaa;
+}
+
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+}
+
+#profile img {
+  width: 5vw;
+  border-radius: 50%;
+}
+
+#suggestions {
+  display: grid;
+  grid-template-columns: 60px auto 80px;
+  align-items: center;
+  width: 25vw;
+}
+
+#suggestions h3 {
+  grid-column: span 3;
+  color: gray;
+}
+
+#suggestions img {
+  width: 3vw;
+  border-radius: 50%;
+}
+
+h1,
+h2 {
+  padding-left: 20px;
+}
+
+#stories {
+  background-color: white;
+  width: 50vw;
+  height: 120px;
+  padding: 5px;
+  border: 1px solid gray;
+  grid-area: 1 / 1 / auto / span 2;
+  margin-top: 15vh;
+  margin-left: 7vw;
+  color: gray;
+}
+
+#stories ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#stories img {
+  height: 7vh;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+#stories li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside {
+  position: fixed;
+  right: 15vw;
+  margin-top: 15vh;
+  grid-area: 1 / 2;
+}
+
+aside p {
+  color: gray;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+article {
+  display: flex;
+  grid-area: 2 / 1 / auto / span 2;
+  width: 50vw;
+  height: 90px;
+  margin-top: 3vh;
+  margin-left: 7vw;
+  flex-direction: column;
+}
+
+article i {
+  font-size: 20pt;
+}
+
+article ul {
+  display: flex;
+  padding-left: 20px;
+  gap: 15px;
+}
+
+div > a > i {
+  padding-right: 20px;
+}
+
+article div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+article img {
+  width: 100%;
+  /* change vertical alignment to eliminate unwanted gap below image caused by baseline alignment */
+  /* https://stackoverflow.com/questions/5804256/why-does-my-image-inside-a-div-have-extra-space-below-it */
+  vertical-align: middle;
+}
+
+article p,
+div > strong,
+article span {
+  margin: 5px;
+  margin-left: 20px;
+}
+
+div > strong {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14pt;
+}
+
+article span {
+  color: gray;
+  font-size: 10pt;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.comment-box {
+  border-top: 1px solid gray;
+  padding: 20px;
+  font-size: 14pt;
+}
+
+.comment-box p {
+  color: gray;
+}
+
+.comment-box * {
+  margin-left: 0;
+}
+
+article section {
+  border: 1px solid gray;
+}
+
+#posts {
+  display: flex;
+  flex-direction: column;
+  gap: 800px;
+}
+
+/* 870 is the width I chose where that the prototype stories still fit in their box */
+/* In reality, it would better if the stories bar was scrollable */
+/* Could also flex-wrap #stories ul */
+@media screen and (max-width: 870px) {
+  aside {
+    display: none;
+  }
+
+  #stories,
+  article {
+    width: 90vw;
+  }
+}
