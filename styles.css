@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 body {
-  background-color: hotpink;
+  background-color: beige;
+  font-family: Inter;
+  margin: 0;
+}
+
+header h1 {
+  display: flex;
+  background-color: olive;
+  padding: 20px 15vw;
+  font-size: 3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2em;
+  margin: 0;
+}
+
+li {
+  line-height: 1.7rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 15vw;
+}
+
+section,
+div {
+  background-color: white;
+  border-radius: 6px;
+  padding: 30px;
+}
+
+div {
+  padding: 15px;
 }
