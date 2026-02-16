@@ -23,8 +23,13 @@ h6 {
   margin: 0;
 }
 
+p,
 li {
   line-height: 1.7rem;
+}
+
+section > ul > li {
+  margin-bottom: 20px;
 }
 
 main {
