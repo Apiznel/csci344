@@ -15,6 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 7vh;
 }
 
 h1 {
@@ -36,6 +37,9 @@ nav {
 h2 {
   font-family: "Tangerine", cursive;
   font-style: normal;
+  font-size: 5em;
+  margin: 0;
+  margin-bottom: 3vh;
 }
 
 /* 3.4 Main */
