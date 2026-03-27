@@ -1,0 +1,8 @@
+.ant-carousel .slick-arrow {
+	/* Ain't pretty but at least I can see */
+	/* A better solution would be to either imitate a cursor (contrast fill and outline) */
+	/* Or offset the arrows and make them a different color than the collapse background */
+	opacity: 1;
+	background-color: black;
+	margin-right: 18px;
+}
