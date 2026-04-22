@@ -1,0 +1,33 @@
+1. Brand, Sneakers, Orders	users table was not defined in YAML
+2. Chose sneakers --> The brand and owner columns
+3. Required fields have a * next to their name and database won't accept a request unless filled
+
+4. `npm run seed` appends new data on top of the old data while changing data through REST API / data grid appends or patches data
+5. To rebuild the database and clear out the old data
+
+6. http://localhost:3100/api/[resource]?[queryParameter]&[additionalQueryParameters]
+	- ? When queryParameter(s) are present
+	- & As the delimiter for multiple queryParamters
+7. http://localhost:3100/api/sneakers?name=running
+
+8. The data grid provides an intuitive interface that generates requests for you while /api/docs feels more manual
+
+9. Easier to modify and type because we're referencing an id to some plant_type which we can modify once to change everywhere.
+
+10. This will be done with fake data although I might fully flesh things out after my final project. That'd require per-site integrations
+	which feels out-of-scope for what I interpret this final project to be focusing on. I wouldn't want to overwhelm myself with this.
+	a. /api/bookmarks
+		1. User bookmarked jobs
+		2. Job name, Job description, Job location, Job type, Job sector, Salary, Company name, Job / Company Image URL
+		3. Job name, Job description, Job location, Job type, Job sector, Salary, Company name
+		4. Company associated with the job
+	b. /api/jobs
+		1. Aggregated job postings
+		2. Job name, Job description, Job location, Job type, Job sector, Salary, Company name, Job / Company Image URL
+		3. Job name, Job description, Job location, Job type, Job sector, Salary, Company name
+		4. Company associated with the job
+	c. /api/companies
+		1. Company profile
+		2. Company name, Company description, Company Logo URL
+		3. Company name, Company description, Company location, Company size
+		4. Jobs associated with the company
