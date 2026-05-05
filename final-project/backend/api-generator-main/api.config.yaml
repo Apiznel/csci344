@@ -1,0 +1,65 @@
+# Sample API: campus fruit trees and bushes
+# Copy this file to the project root as api.config.yaml (backup the default first if you want).
+
+resources:
+  - type: Job
+    path: /api/jobs
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: name
+        type: string
+        required: true
+        query: true
+      - name: description
+        type: text
+        query: true
+      - name: job_type
+        type: string # Part-time, full-time, internship, etc.
+        required: true
+        query: true
+      - name: min_salary
+        type: number
+        required: true
+        query: true
+      - name: max_salary
+        type: number
+        query: true
+      - name: deadline
+        type: string
+        query: true
+      - name: company_name
+        type: string
+        required: true
+        query: true
+      - name: image_url
+        type: image_url
+      - name: latitude
+        type: number
+        query: true
+      - name: longitude
+        type: number
+        query: true
+    permissions:
+      list: public
+      retrieve: public
+      create: [admin, owner]
+      update: [admin, owner]
+      delete: [admin, owner]
+
+  - type: Bookmark
+    path: /api/bookmarks
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: job
+        type: Job
+        required: true
+        query: true
+      - name: notes
+        type: text
+        query: true
+    permissions:
+      list: [admin, owner]
+      retrieve: [admin, owner]
+      create: user
+      update: [admin, owner]
+      delete: [admin, owner]

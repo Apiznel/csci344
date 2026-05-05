@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "configPath": "/home/user/Documents/Classes/csci344/final-project/backend/api-generator-main/api.config.yaml",
+    "generatedAt": "2026-05-05T22:38:03.677Z",
+    "seedDir": "data/sample-data"
+  },
+  "userResource": {
+    "type": "User",
+    "tableName": "users",
+    "fields": [
+      {
+        "name": "role",
+        "type": "string",
+        "storageType": "string",
+        "required": true,
+        "default": "user",
+        "choices": [
+          "user",
+          "admin"
+        ],
+        "relation": null,
+        "query": {
+          "param": "role",
+          "op": "eq"
+        }
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "Job",
+      "tableName": "jobs",
+      "fileBase": "jobs",
+      "path": "/api/jobs",
+      "operations": [
+        "list",
+        "retrieve",
+        "create",
+        "update",
+        "delete"
+      ],
+      "shareable": false,
+      "ownershipEnabled": true,
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "name",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "storageType": "text",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "description",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "job_type",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "job_type",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "min_salary",
+          "type": "number",
+          "storageType": "number",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "min_salary",
+            "op": "eq"
+          }
+        },
+        {
+          "name": "max_salary",
+          "type": "number",
+          "storageType": "number",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "max_salary",
+            "op": "eq"
+          }
+        },
+        {
+          "name": "deadline",
+          "type": "string",
+          "storageType": "string",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "deadline",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "company_name",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "company_name",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "image_url",
+          "type": "image_url",
+          "storageType": "image_url",
+          "required": false,
+          "relation": null,
+          "query": null
+        },
+        {
+          "name": "latitude",
+          "type": "number",
+          "storageType": "number",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "latitude",
+            "op": "eq"
+          }
+        },
+        {
+          "name": "longitude",
+          "type": "number",
+          "storageType": "number",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "longitude",
+            "op": "eq"
+          }
+        }
+      ],
+      "permissions": {
+        "list": "public",
+        "retrieve": "public",
+        "create": [
+          "admin",
+          "owner"
+        ],
+        "update": [
+          "admin",
+          "owner"
+        ],
+        "delete": [
+          "admin",
+          "owner"
+        ]
+      },
+      "queryFilters": [
+        {
+          "param": "name",
+          "fieldName": "name",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "description",
+          "fieldName": "description",
+          "op": "contains",
+          "type": "text",
+          "storageType": "text",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "job_type",
+          "fieldName": "job_type",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "min_salary",
+          "fieldName": "min_salary",
+          "op": "eq",
+          "type": "number",
+          "storageType": "number",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "max_salary",
+          "fieldName": "max_salary",
+          "op": "eq",
+          "type": "number",
+          "storageType": "number",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "deadline",
+          "fieldName": "deadline",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "company_name",
+          "fieldName": "company_name",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "latitude",
+          "fieldName": "latitude",
+          "op": "eq",
+          "type": "number",
+          "storageType": "number",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "longitude",
+          "fieldName": "longitude",
+          "op": "eq",
+          "type": "number",
+          "storageType": "number",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "owner_id",
+          "fieldName": "owner_id",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null
+        }
+      ]
+    },
+    {
+      "type": "Bookmark",
+      "tableName": "bookmarks",
+      "fileBase": "bookmarks",
+      "path": "/api/bookmarks",
+      "operations": [
+        "list",
+        "retrieve",
+        "create",
+        "update",
+        "delete"
+      ],
+      "shareable": false,
+      "ownershipEnabled": true,
+      "fields": [
+        {
+          "name": "job",
+          "type": "Job",
+          "storageType": "integer",
+          "required": true,
+          "relation": {
+            "resourceType": "Job",
+            "targetField": "id"
+          },
+          "query": {
+            "param": "job",
+            "op": "eq"
+          }
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "storageType": "text",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "notes",
+            "op": "contains"
+          }
+        }
+      ],
+      "permissions": {
+        "list": [
+          "admin",
+          "owner"
+        ],
+        "retrieve": [
+          "admin",
+          "owner"
+        ],
+        "create": "user",
+        "update": [
+          "admin",
+          "owner"
+        ],
+        "delete": [
+          "admin",
+          "owner"
+        ]
+      },
+      "queryFilters": [
+        {
+          "param": "job",
+          "fieldName": "job",
+          "op": "eq",
+          "type": "Job",
+          "storageType": "integer",
+          "relation": {
+            "resourceType": "Job",
+            "targetField": "id"
+          },
+          "choices": null
+        },
+        {
+          "param": "notes",
+          "fieldName": "notes",
+          "op": "contains",
+          "type": "text",
+          "storageType": "text",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "owner_id",
+          "fieldName": "owner_id",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null
+        }
+      ]
+    }
+  ]
+}
