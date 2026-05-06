@@ -26,6 +26,8 @@ export default function Form({ setMode, job }) {
         return;
       }
 
+      setMode("list");
+
     } catch {
       setError("Login failed.");
     }
